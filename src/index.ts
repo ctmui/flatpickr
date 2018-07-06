@@ -2489,7 +2489,8 @@ function FlatpickrInstance(
 
       self.monthElements[i].textContent =
         monthToStr(d.getMonth(), self.config.shorthandCurrentMonth, self.l10n) +
-        " ";
+        " " +
+        d.getFullYear().toString();
       yearElement.value = d.getFullYear().toString();
     });
 
