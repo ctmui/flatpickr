@@ -1990,7 +1990,7 @@
         self.yearElements.forEach(function (yearElement, i) {
           var d = new Date(self.currentYear, self.currentMonth, 1);
           d.setMonth(self.currentMonth + i);
-          self.monthElements[i].textContent = monthToStr(d.getMonth(), self.config.shorthandCurrentMonth, self.l10n) + " ";
+          self.monthElements[i].textContent = monthToStr(d.getMonth(), self.config.shorthandCurrentMonth, self.l10n) + " " + d.getFullYear().toString();
           yearElement.value = d.getFullYear().toString();
         });
         self._hidePrevMonthArrow = self.config.minDate !== undefined && (self.currentYear === self.config.minDate.getFullYear() ? self.currentMonth <= self.config.minDate.getMonth() : self.currentYear < self.config.minDate.getFullYear());
